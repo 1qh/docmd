@@ -1,0 +1,65 @@
+{
+  "name": "anymd",
+  "version": "0.0.12",
+  "description": "Convert any document (PDF, DOC, DOCX) to clean Markdown for RAG",
+  "keywords": [
+    "markdown",
+    "pdf",
+    "ocr",
+    "document",
+    "converter",
+    "rag",
+    "mlx",
+    "apple-silicon"
+  ],
+  "homepage": "https://github.com/1qh/anymd#readme",
+  "bugs": {
+    "url": "https://github.com/1qh/anymd/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1qh/anymd.git"
+  },
+  "license": "MIT",
+  "bin": {
+    "anymd": "cli.tsx"
+  },
+  "files": [
+    "cli.tsx",
+    "main.ts",
+    "runner.ts",
+    "src/",
+    "!src/__tests__/",
+    "scripts/",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "doc": "bun cli.tsx --input-dir ./data --output-dir ./output",
+    "lint": "eslint",
+    "start": "bun run main.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "markdownlint": "^0.40.0",
+    "p-map": "^7.0.4",
+    "turndown": "^7.2.2",
+    "yoctocolors": "^2.1.2",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/turndown": "^5.0.6"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ]
+}

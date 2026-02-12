@@ -1,0 +1,9 @@
+{
+  "classifyBatchSize": 20,
+  "datasetConcurrency": 50,
+  "enhanceConcurrency": 10,
+  "markerWorkers": 3,
+  "minTextLength": 50,
+  "nativeThreshold": 200,
+  "scannedThreshold": 50
+}
